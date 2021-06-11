@@ -33,8 +33,8 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "Hi there, This is a music assistant service .\n\n ❗️ Rules:\n   - No chatting allowed\n   - No spam allowed \n\n 👉 **SEND GROUP INVITE LINK OR USERNAME IF USERBOT CAN'T JOIN YOUR GROUP.**\n\n ⚠️ Disclamer: If you are sending a message here it means admin will see your message and join chat\n    - Don't add this user to secret groups.\n   - Don't Share private info here\n\n",
-            )
+                "**Hi there, This is a music assistant service of @VenomMusicBot**\n\n ❗️ **Rules:**\n   **- No chatting allowed**\n   **- No spam allowed** \n\n 👉 **IF YOU ARE UNABLE TO ADD ASSISTANT OR HAVE PROBLEM REGARDING MUSIC BOT KINDLY CONTACT @R2K_VENOM.**\n\n **⚠️ NOTE: If you are unable to add music assistant in private groups... just make the group public for 1 minute and send the group link here or in @R2K_VENOM dm and after the music assistant joins you can make your group private again**\n\n  **❗If you need any help just ask here @CrackMonkey**\n\n",
+    )
             return
 
     
