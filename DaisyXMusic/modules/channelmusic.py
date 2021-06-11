@@ -413,7 +413,7 @@ async def play(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your channel due to heavy requests for userbot! Make sure user is not banned in group."
+                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your channel due to heavy requests for @VenomVcManager! Make sure @VenomVcManager is not banned in group."
                         "\n\nOr manually add assistant to your Group and try again</b>",
                     )
     try:
@@ -421,7 +421,7 @@ async def play(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, Ask channel admin to send /play command for first time or add {user.first_name} manually</i>"
+            f"<i> {user.first_name} @VenomVcManager not in this chat, Ask channel admin to send /play command for first time or add @VenomVcManager manually</i>"
         )
         return
     message.from_user.id
@@ -657,7 +657,7 @@ async def deezer(client: Client, message_: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your channel due to heavy requests for userbot! Make sure user is not banned in channel."
+                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your channel due to heavy requests for @VenomVcManager! Make sure @VenomVcManager is not banned in channel."
                         "\n\nOr manually add assistant to your Group and try again</b>",
                     )
     try:
@@ -665,7 +665,7 @@ async def deezer(client: Client, message_: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this channel, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
+            f"<i> {user.first_name} @VenomVcManager not in this channel, Ask admin to send /play command for first time or add @VenomVcManager manually</i>"
         )
         return
     requested_by = message_.from_user.first_name
@@ -755,7 +755,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "@VenomVcManager"
     usar = user
     wew = usar.id
     try:
@@ -796,7 +796,7 @@ async def jiosaavn(client: Client, message_: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            "<i> @VenomVcManager not in this channel, Ask channel admin to send /play command for first time or add assistant manually</i>"
+            "<i> @VenomVcManager not in this channel, Ask channel admin to send /play command for first time or add @VenomVcManager manually</i>"
         )
         return
     requested_by = message_.from_user.first_name
