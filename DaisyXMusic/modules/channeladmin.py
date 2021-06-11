@@ -70,7 +70,7 @@ async def resume(_, message: Message):
         await message.reply_text("⏸ Resumed!")
 
 
-@Client.on_message(filters.command(["channelend","cend"]) & filters.group & ~filters.edited)
+@Client.on_message(filters.command(["channelend","cend","cstop"]) & filters.group & ~filters.edited)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -127,7 +127,7 @@ async def skip(_, message: Message):
     await message.reply_text(f"- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**")
 
 
-@Client.on_message(filters.command("channeladmincache"))
+@Client.on_message(filters.command(["channeladmincache","cadmincache","channeladminreset","cadminreset"]))
 @errors
 async def admincache(client, message: Message):
     try:
