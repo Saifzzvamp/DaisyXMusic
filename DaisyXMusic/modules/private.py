@@ -30,15 +30,15 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "➕ α∂∂ мє тσ yσυя gяσυρ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "📲 Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        "🔈 cнαηηєł", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}")
+                        "gяσυρ 💬", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
+                        "❣️ мy σωηєя ❣️️", url="https://t.me/R2K_VENOM")
                 ]
             ]
         ),
@@ -93,10 +93,10 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '📲 Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
-             InlineKeyboardButton(text = '💬 Support', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '🛠 Source Code 🛠', url=f"https://{SOURCE_CODE}")],
+            [InlineKeyboardButton("➕ α∂∂ мє тσ yσυя gяσυρ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '🔈 cнαηηєł', url=f"https://t.me/{UPDATES_CHANNEL}"),
+             InlineKeyboardButton(text = 'gяσυρ 💬', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton(text = '❣️ мy σωηєя ❣️', url="https://t.me/R2K_VENOM")],
             [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
         ]
     else:
