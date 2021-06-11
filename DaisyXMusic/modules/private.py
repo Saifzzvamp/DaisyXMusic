@@ -42,7 +42,6 @@ def _start(client, message):
                 ]
             ]
         ),
-        reply_to_message_id=message.message_id
         )
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
