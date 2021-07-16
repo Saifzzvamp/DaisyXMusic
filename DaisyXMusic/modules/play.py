@@ -61,9 +61,8 @@ def cb_admin_check(func: Callable) -> Callable:
         admemes = a.get(cb.message.chat.id)
         if cb.from_user.id in admemes:
             return await func(client, cb)
-        else:
-            await cb.answer("You ain't allowed!", show_alert=True)
-            return
+        await cb.answer("You ain't allowed!", show_alert=True)
+        return
 
     return decorator
 
@@ -614,29 +613,28 @@ async def play(_, message: Message):
         )
         os.remove("final.png")
         return await lel.delete()
-    else:
-        chat_id = get_chat_id(message.chat)
-        que[chat_id] = []
-        qeue = que.get(chat_id)
-        s_name = title
-        r_by = message.from_user
-        loc = file_path
-        appendable = [s_name, r_by, loc]
-        qeue.append(appendable)
-        try:
-            callsmusic.pytgcalls.join_group_call(chat_id, file_path)
-        except:
-            message.reply("Group Call is not connected or I can't join it")
-            return
-        await message.reply_photo(
-            photo="final.png",
-            reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
-                message.from_user.mention()
-            ),
-        )
-        os.remove("final.png")
-        return await lel.delete()
+    chat_id = get_chat_id(message.chat)
+    que[chat_id] = []
+    qeue = que.get(chat_id)
+    s_name = title
+    r_by = message.from_user
+    loc = file_path
+    appendable = [s_name, r_by, loc]
+    qeue.append(appendable)
+    try:
+        callsmusic.pytgcalls.join_group_call(chat_id, file_path)
+    except:
+        message.reply("Group Call is not connected or I can't join it")
+        return
+    await message.reply_photo(
+        photo="final.png",
+        reply_markup=keyboard,
+        caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            message.from_user.mention()
+        ),
+    )
+    os.remove("final.png")
+    return await lel.delete()
 
 
 @Client.on_message(filters.command("dplay") & filters.group & ~filters.edited)

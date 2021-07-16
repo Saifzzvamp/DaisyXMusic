@@ -582,25 +582,24 @@ async def play(_, message: Message):
         )
         os.remove("final.png")
         return await lel.delete()
-    else:
-        chat_id = chid
-        que[chat_id] = []
-        qeue = que.get(chat_id)
-        s_name = title
-        r_by = message.from_user
-        loc = file_path
-        appendable = [s_name, r_by, loc]
-        qeue.append(appendable)
-        callsmusic.pytgcalls.join_group_call(chat_id, file_path)
-        await message.reply_photo(
-            photo="final.png",
-            reply_markup=keyboard,
-            caption="▶️ **Playing** the song requested by {} via Youtube Music 😜 in Linked Channel".format(
-                message.from_user.mention()
-            ),
-        )
-        os.remove("final.png")
-        return await lel.delete()
+    chat_id = chid
+    que[chat_id] = []
+    qeue = que.get(chat_id)
+    s_name = title
+    r_by = message.from_user
+    loc = file_path
+    appendable = [s_name, r_by, loc]
+    qeue.append(appendable)
+    callsmusic.pytgcalls.join_group_call(chat_id, file_path)
+    await message.reply_photo(
+        photo="final.png",
+        reply_markup=keyboard,
+        caption="▶️ **Playing** the song requested by {} via Youtube Music 😜 in Linked Channel".format(
+            message.from_user.mention()
+        ),
+    )
+    os.remove("final.png")
+    return await lel.delete()
 
 
 @Client.on_message(filters.command(["channeldplay","cdplay"]) & filters.group & ~filters.edited)
